@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — связаться с нами</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Manrope:wght@500;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-EIv1VNXWXf00PRt1ihssG42oy0l4Oa8cPJ9hVVxd9dWPi3tXUGXvNI-AwaU18iN3zMicAp7h6PgiMbqq5qe1Q" charset="UTF-8"></script><style>
+:root{
+  --cream:#F4F0E6;
+  --cream-2:#ECE5D4;
+  --white:#FFFDF9;
+  --navy:#1C2A47;
+  --navy-2:#28395c;
+  --ink:#242B3A;
+  --muted:#5B6478;
+  --muted-2:#8890a0;
+  --orange:#E38B34;
+  --orange-dark:#C06A1F;
+  --orange-tint:#FBE9CE;
+  --orange-tint-2:#F7DDB6;
+  --gold:#C79A2A;
+  --slate:#4F5B76;
+  --slate-tint:#E4E8F0;
+  --teal:#2E8B84;
+  --teal-tint:#DDEEEC;
+  --line:rgba(28,42,71,.12);
+  --shadow:0 18px 40px rgba(28,42,71,.10);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit;}
+.wrap{ max-width:920px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:12.5px;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--orange-dark);
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:14px;
+}
+/* ---------- STICKY NAV ---------- */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,240,230,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1080px; margin:0 auto; padding:12px 24px;
+  display:flex; align-items:center; gap:18px;
+}
+.topbar-logo{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:14px;
+  color:var(--navy); white-space:nowrap; display:flex; align-items:center; gap:6px;
+}
+.topbar-nav{
+  display:flex; gap:4px; overflow-x:auto; flex:1;
+  scrollbar-width:none;
+}
+.topbar-nav::-webkit-scrollbar{display:none;}
+.topbar-nav a{
+  font-family:'Manrope',sans-serif; font-weight:600; font-size:12.5px;
+  color:var(--slate); text-decoration:none; white-space:nowrap;
+  padding:7px 12px; border-radius:100px; transition:background .15s, color .15s;
+}
+.topbar-nav a:hover{ background:var(--orange-tint); color:var(--orange-dark);}
+/* ---------- HERO ---------- */
+.hero{ padding:56px 0 34px; text-align:center;}
+.hero .eyebrow{ justify-content:center; width:100%;}
+.hero h1{
+  font-family:'Unbounded',sans-serif; font-weight:800; font-size:clamp(28px,5vw,48px);
+  color:var(--navy); line-height:1.12; letter-spacing:-.01em; max-width:22ch; margin:0 auto 18px;
+}
+.hero .sub{
+  font-size:16.5px; color:var(--muted); max-width:60ch; margin:0 auto;
+}
+.hero-rule{
+  width:64px; height:3px; background:var(--orange); border-radius:3px;
+  margin:28px auto 0;
+}
+/* ---------- CONTACT PANEL ---------- */
+.contact-section{ padding:36px 0 50px;}
+.contact-panel{
+  background:var(--white); border:1px solid var(--line); border-radius:20px;
+  padding:40px 44px; box-shadow:var(--shadow);
+}
+.contact-panel h2{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:22px; color:var(--navy);
+  margin-bottom:16px;
+}
+.contact-panel p{ font-size:15.3px; color:var(--muted); margin-bottom:16px; max-width:68ch;}
+.contact-card{
+  background:var(--cream); border:1px solid var(--line); border-radius:16px;
+  padding:28px 32px; margin:24px 0;
+  text-align:center;
+}
+.contact-card .label{
+  font-family:'Manrope',sans-serif; font-weight:700; font-size:11.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--muted-2);
+  margin-bottom:8px;
+}
+.contact-card .email{
+  display:inline-block;
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:22px;
+  color:var(--navy); text-decoration:none;
+  padding:12px 28px; border-radius:100px;
+  background:var(--orange-tint); border:1px solid var(--orange-tint-2);
+  transition:background .15s, transform .15s;
+}
+.contact-card .email:hover{
+  background:var(--orange-tint-2); transform:scale(1.02);
+}
+/* ---------- TWO-COLUMN GRID ---------- */
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:10px;}
+.contact-item{
+  background:var(--cream); border:1px solid var(--line); border-radius:16px;
+  padding:24px 26px; text-align:center;
+}
+.contact-item .icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:40px; height:40px; border-radius:12px;
+  background:var(--teal-tint); color:var(--teal);
+  font-size:20px; margin-bottom:12px;
+}
+.contact-item h4{ font-family:'Manrope',sans-serif; font-weight:800; font-size:15px; color:var(--navy); margin-bottom:6px;}
+.contact-item p{ font-size:14px; color:var(--muted); margin-bottom:0;}
+/* ---------- OUTRO ---------- */
+.outro{ padding:16px 0 50px;}
+.outro-panel{
+  background:var(--white); border:1px solid var(--line); border-radius:20px;
+  padding:36px 42px; box-shadow:var(--shadow);
+}
+.outro-panel h2{ font-family:'Manrope',sans-serif; font-weight:800; font-size:22px; color:var(--navy); margin-bottom:16px;}
+.outro-panel p{ font-size:15px; color:var(--muted); margin-bottom:12px; max-width:74ch;}
+/* ---------- FOOTER ---------- */
+footer{
+  margin-top:60px; padding:32px 0 48px;
+  border-top:1px solid var(--line);
+  text-align:center; color:var(--muted-2); font-size:13px;
+}
+footer .brand{ font-family:'Manrope',sans-serif; font-weight:800; color:var(--navy); margin-bottom:6px;}
+footer a{ color:var(--orange-dark); text-decoration:none;}
+@media (max-width:720px){
+  .contact-panel{ padding:24px 20px;}
+  .contact-card .email{ font-size:18px; padding:10px 20px;}
+  .contact-grid{ grid-template-columns:1fr;}
+  .outro-panel{ padding:24px 20px;}
+  .hero h1{ max-width:16ch;}
+}
+</style>
+  <meta name="google-site-verification" content="KN21NblTka7hMfBLByZWgUa3AxYQaiY74Lb3zVHD0PY" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109196841', 'ym');
+    ym(109196841, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/109196841" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta name="yandex-verification" content="078578b1309aa7f3" />
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+        <div class="topbar-logo">Контакты</div>
+        <nav class="topbar-nav">
+      <a href="/site/vercell/">Курсы</a>
+      <a href="/site/top-20-ai-tools/">AI-инструменты</a>
+      <a href="/site/top-30-universities/">Вузы</a>
+      <a href="/site/marketing-jobs/">Где искать работу маркетологу?</a>
+      <a href="/site/contacts/">Контакты</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="eyebrow">Обратная связь</div>
+    <h1>Контакты — свяжитесь с нами</h1>
+    <p class="sub">По любым вопросам — от сотрудничества до технической поддержки</p>
+    <div class="hero-rule"></div>
+  </section>
+  <!-- CONTACT INFO -->
+  <section class="contact-section" id="contacts">
+    <div class="contact-panel">
+      <h2>Написать нам</h2>
+      <p>Если у вас есть вопросы про сотрудничество, публикации, предложения по улучшению или просто хотите что‑то уточнить — пишите. Отвечаем в течение 24 часов.</p>
+      <div class="contact-card">
+        <div class="label">Основная почта</div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="icon">📝</div>
+          <h4>Сотрудничество</h4>
+          <p>По вопросам партнёрства, рекламы и спецпроектов</p>
+        </div>
+        <div class="contact-item">
+          <div class="icon">🔧</div>
+          <h4>Техподдержка</h4>
+          <p>Если нашли ошибку или что‑то не работает</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ -->
+  <section class="outro" id="faq">
+    <div class="outro-panel">
+      <h2>Часто задаваемые вопросы</h2>
+      <p><strong>Как быстро вы отвечаете?</strong><br>Обычно в течение дня. Если срочно — укажите в теме письма «Срочно».</p>
+      <p><strong>Можно ли предложить тему для статьи?</strong><br>Да, присылайте идеи на почту. Если тема интересная и релевантная — обсудим.</p>
+      <p><strong>Работаете ли вы с авторами?</strong><br>Да, открыты к сотрудничеству с экспертами, копирайтерами и блогерами. Пишите.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="brand">Контакты</div>
+    <div style="margin-top:8px">Почта:lokmanji@yandex.ru </div>
+  </footer>
+</div>
+</body>
+</html>
