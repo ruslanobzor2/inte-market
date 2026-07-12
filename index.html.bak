@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТОП-20 нейросетей для интернет-маркетолога в 2026 — обзор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Manrope:wght@500;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4F0E6;
+  --cream-2:#ECE5D4;
+  --white:#FFFDF9;
+  --navy:#1C2A47;
+  --navy-2:#28395c;
+  --ink:#242B3A;
+  --muted:#5B6478;
+  --muted-2:#8890a0;
+  --orange:#E38B34;
+  --orange-dark:#C06A1F;
+  --orange-tint:#FBE9CE;
+  --orange-tint-2:#F7DDB6;
+  --gold:#C79A2A;
+  --slate:#4F5B76;
+  --slate-tint:#E4E8F0;
+  --teal:#2E8B84;
+  --teal-tint:#DDEEEC;
+  --purple:#7C3AED;
+  --purple-tint:#EDE9FE;
+  --pink:#DB2777;
+  --pink-tint:#FDF2F8;
+  --green:#059669;
+  --green-tint:#D1FAE5;
+  --blue:#2563EB;
+  --blue-tint:#DBEAFE;
+  --line:rgba(28,42,71,.12);
+  --shadow:0 18px 40px rgba(28,42,71,.10);
+  --radius:20px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit;}
+.wrap{ max-width:920px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:12.5px;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--orange-dark);
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:14px;
+}
+
+/* STICKY NAV */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(244,240,230,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1080px; margin:0 auto; padding:12px 24px;
+  display:flex; align-items:center; gap:18px;
+}
+.topbar-logo{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:14px;
+  color:var(--navy); white-space:nowrap; display:flex; align-items:center; gap:6px;
+}
+.topbar-nav{
+  display:flex; gap:4px; overflow-x:auto; flex:1;
+  scrollbar-width:none;
+}
+.topbar-nav::-webkit-scrollbar{display:none;}
+.topbar-nav a{
+  font-family:'Manrope',sans-serif; font-weight:600; font-size:12.5px;
+  color:var(--slate); text-decoration:none; white-space:nowrap;
+  padding:7px 12px; border-radius:100px; transition:background .15s, color .15s;
+}
+.topbar-nav a:hover{ background:var(--orange-tint); color:var(--orange-dark);}
+
+/* HERO */
+.hero{ padding:56px 0 34px; text-align:center;}
+.hero .eyebrow{ justify-content:center; width:100%;}
+.hero h1{
+  font-family:'Unbounded',sans-serif; font-weight:800; font-size:clamp(26px,4.8vw,46px);
+  color:var(--navy); line-height:1.12; letter-spacing:-.01em; max-width:18ch; margin:0 auto 18px;
+}
+.hero .sub{
+  font-size:16.5px; color:var(--muted); max-width:58ch; margin:0 auto;
+}
+.hero-rule{
+  width:64px; height:3px; background:var(--orange); border-radius:3px;
+  margin:28px auto 0;
+}
+
+/* INTRO PANEL */
+.intro{ padding:36px 0 50px;}
+.intro-panel{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:36px 42px; box-shadow:var(--shadow);
+}
+.intro h2{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:22px; color:var(--navy);
+  margin-bottom:16px;
+}
+.intro p{ color:var(--muted); font-size:15.3px; margin-bottom:15px; max-width:74ch;}
+.intro p:first-of-type:first-letter{
+  font-family:'Manrope',sans-serif; font-weight:800; font-style:normal; font-size:50px;
+  float:left; line-height:.78; padding:4px 10px 0 0; color:var(--orange);
+}
+.intro-highlight{
+  font-style:normal; color:var(--ink); font-weight:600; font-size:15px;
+  background:var(--orange-tint); border-left:3px solid var(--orange);
+  border-radius:0 12px 12px 0; padding:16px 20px; margin:20px 0 0; max-width:74ch;
+}
+
+/* SECTION KICKER */
+.section-kicker{
+  font-family:'Manrope',sans-serif; font-weight:700; font-size:13px; color:var(--muted-2);
+  letter-spacing:.04em; margin:8px 0 18px;
+}
+.trophy-banner{
+  background:linear-gradient(135deg, var(--navy), var(--navy-2));
+  border-radius:var(--radius); padding:24px 32px; margin-bottom:36px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:var(--shadow);
+}
+.trophy-banner h3{
+  font-family:'Manrope',sans-serif; font-weight:800; color:#fff; font-size:20px;
+  letter-spacing:.01em;
+}
+
+/* CATEGORY BADGE */
+.cat-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:15px;
+  color:var(--white); padding:10px 20px; border-radius:14px;
+  margin-bottom:24px;
+}
+.cat-badge.text{ background:linear-gradient(135deg,#3B82F6,#1D4ED8);}
+.cat-badge.image{ background:linear-gradient(135deg,#8B5CF6,#6D28D9);}
+.cat-badge.video{ background:linear-gradient(135deg,#EC4899,#BE185D);}
+.cat-badge.seo{ background:linear-gradient(135deg,#059669,#047857);}
+.cat-badge.smm{ background:linear-gradient(135deg,#F59E0B,#D97706);}
+
+/* TOOL CARD */
+.tool-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px 32px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.tool-card::before{
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:4px;
+  background:var(--card-accent,#E38B34);
+}
+.tool-card.text{--card-accent:#3B82F6;}
+.tool-card.image{--card-accent:#8B5CF6;}
+.tool-card.video{--card-accent:#EC4899;}
+.tool-card.seo{--card-accent:#059669;}
+.tool-card.smm{--card-accent:#F59E0B;}
+
+.tool-head{ display:flex; align-items:flex-start; gap:16px; margin-bottom:6px;}
+.tool-num{
+  width:42px; height:42px; border-radius:50%; flex:none;
+  background:var(--card-accent,#E38B34); color:#fff;
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:18px;
+  display:flex; align-items:center; justify-content:center;
+}
+.tool-title h3{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:19px; color:var(--navy); line-height:1.3;
+}
+.tool-title .subtitle{
+  font-size:13.5px; color:var(--muted-2); font-weight:500; margin-top:3px;
+}
+
+/* stat chips */
+.tool-stats{ display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 16px;}
+.tool-stats .chip{
+  background:var(--cream); border:1px solid var(--line); border-radius:10px;
+  padding:8px 14px; font-size:13px; color:var(--navy); display:flex; align-items:center; gap:6px;
+}
+.tool-stats .chip .label{ font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted-2); font-family:'Manrope',sans-serif; font-weight:700;}
+
+.tool-body p{ font-size:14.8px; color:var(--ink); margin-bottom:12px;}
+.tool-body p:last-of-type{ margin-bottom:0;}
+.tool-body strong{ color:var(--navy);}
+.tool-body ul{ margin:8px 0 14px; padding-left:0;}
+.tool-body ul li{
+  list-style:none; margin-bottom:6px; padding-left:20px; position:relative;
+  font-size:14.5px; color:var(--ink);
+}
+.tool-body ul li::before{
+  content:'▸'; position:absolute; left:0; color:var(--card-accent,var(--orange)); font-weight:700;
+}
+.tool-extra{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; padding-top:14px;
+  border-top:1px solid var(--line);
+}
+.tool-extra .tag{
+  font-size:12px; padding:5px 12px; border-radius:100px;
+  background:var(--cream-2); color:var(--muted); font-family:'Manrope',sans-serif; font-weight:700;
+}
+.tool-extra .tag.green{ background:var(--green-tint); color:var(--green);}
+.tool-extra .tag.orange{ background:var(--orange-tint-2); color:var(--orange-dark);}
+.tool-extra .tag.blue{ background:var(--blue-tint); color:var(--blue);}
+
+/* OUTRO / итоги */
+.outro{ padding:36px 0 50px;}
+.outro-panel{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:36px 42px; box-shadow:var(--shadow);
+}
+.outro h2{ font-family:'Manrope',sans-serif; font-weight:800; font-size:22px; color:var(--navy); margin-bottom:16px;}
+.outro p{ font-size:15px; color:var(--muted); margin-bottom:14px; max-width:74ch;}
+
+.outro-list{ margin:16px 0;}
+.outro-list li{
+  font-size:14.5px; color:var(--ink); margin-bottom:10px;
+  padding-left:24px; position:relative; list-style:none;
+}
+.outro-list li::before{
+  content:'→'; position:absolute; left:0; color:var(--orange-dark); font-weight:700;
+}
+
+/* выбор со схемой */
+.decision-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;}
+.decision-card{
+  background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:20px 22px;
+  border-top:3px solid var(--card-accent,#E38B34);
+}
+.decision-card.text{--card-accent:#3B82F6;}
+.decision-card.image{--card-accent:#8B5CF6;}
+.decision-card.video{--card-accent:#EC4899;}
+.decision-card.seo{--card-accent:#059669;}
+.decision-card.smm{--card-accent:#F59E0B;}
+
+.decision-card h4{
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:15px; color:var(--navy); margin-bottom:6px;
+}
+.decision-card p{ font-size:14px; color:var(--muted); margin-bottom:4px;}
+.decision-card .tools-list{
+  font-family:'Manrope',sans-serif; font-weight:700; font-size:12px;
+  color:var(--card-accent,#E38B34); margin-top:6px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:60px; padding:32px 0 48px;
+  border-top:1px solid var(--line);
+  text-align:center; color:var(--muted-2); font-size:13px;
+}
+footer .brand{ font-family:'Manrope',sans-serif; font-weight:800; color:var(--navy); margin-bottom:6px;}
+footer a{ color:var(--orange-dark); text-decoration:none;}
+
+@media (max-width:720px){
+  .tool-card{ padding:22px 18px;}
+  .decision-grid{ grid-template-columns:1fr;}
+  .intro-panel{ padding:24px 20px;}
+  .outro-panel{ padding:24px 20px;}
+  .hero h1{ max-width:14ch;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-logo">🧠 AI Tools</div>
+    <nav class="topbar-nav">
+      <a href="#top">ТОП-20</a>
+      <a href="#cat-text">Тексты</a>
+      <a href="#cat-image">Дизайн</a>
+      <a href="#cat-video">Видео</a>
+      <a href="#cat-seo">SEO</a>
+      <a href="#cat-smm">SMM</a>
+      <a href="#choice">Как выбирать</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="eyebrow">AI в маркетинге 2026</div>
+    <h1>ТОП‑20 нейросетей для интернет‑маркетолога</h1>
+    <p class="sub">Гайд по инструментам: тексты, дизайн, видео, SEO и автоматизация — с ценами, доступом в РФ и сценариями</p>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-panel">
+      <h2>Карта AI-инструментов для маркетолога</h2>
+      <p>За несколько лет дискуссия вокруг ИИ в маркетинге сменила фокус. В 2022 году маркетологи обсуждали, сможет ли технология заменить человека. А к 2025-му на первый план вышел другой вопрос: «Кто быстрее встроит нейросети в рабочие процессы и за счёт этого повысит эффективность?»</p>
+      <p>Цифры говорят сами за себя. В России 93% маркетинговых команд уже применяют генеративный ИИ в ежедневной работе. На западных рынках время на подготовку черновиков контента и идей сократилось примерно на 80%. По данным HubSpot State of Marketing 2025, маркетологи с системным использованием AI закрывают на 37% больше задач за тот же рабочий день.</p>
+      <div class="intro-highlight">Проблема в другом: рынок переполнен. Сотни сервисов, у каждого «лучший в мире AI», у каждого пробный период. Маркетолог начинает тестировать, запутывается и возвращается к старому укладу. Эта статья — карта. 20 нейросетей, сгруппированных по задачам. С ценами, доступом в РФ и конкретными сценариями использования.</div>
+    </div>
+  </section>
+
+  <!-- CATEGORY 1: ТЕКСТЫ -->
+  <section id="cat-text">
+    <div class="section-kicker">Категория 1</div>
+    <div class="cat-badge text">✍️ Тексты и контент</div>
+
+    <!-- 1. ChatGPT -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">1</div>
+        <div class="tool-title">
+          <h3>ChatGPT</h3>
+          <div class="subtitle">OpenAI — универсальный AI-ассистент</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Через VPN</span>
+        <span class="chip"><span class="label">Цена</span> Бесплатно / $20/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>Универсальный AI-ассистент, который помогает с текстами, сценариями, письмами, аналитикой и мозговыми штурмами. Генерация контента любых форматов — от постов до статей. Помощь в стратегическом планировании и брейншторме кампаний. Быстрые итерации: за 10 минут — 15 идей, выбираешь лучшую.</p>
+        <ul>
+          <li>Мозговые штурмы, варианты заголовков, быстрые черновики</li>
+          <li>Генерация идей для рекламных кампаний</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Чат</span>
+        <span class="tag blue">Тексты</span>
+        <span class="tag orange">Требует VPN</span>
+      </div>
+    </div>
+
+    <!-- 2. DeepSeek -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">2</div>
+        <div class="tool-title">
+          <h3>DeepSeek</h3>
+          <div class="subtitle">Китайская модель — полностью бесплатный аналог GPT</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Без ограничений</span>
+        <span class="chip"><span class="label">Цена</span> Полностью бесплатно</span>
+      </div>
+      <div class="tool-body">
+        <p>Китайская модель, вышедшая в начале 2025 года. За первые несколько дней стала самым скачиваемым бесплатным приложением в App Store, обогнав ChatGPT. Работает с файлами через веб-интерфейс или приложение. Модель V3.2 (декабрь 2025) получила встроенные механизмы рассуждений. Интеграция с поисковыми системами, калькуляторами и инструментами выполнения кода.</p>
+        <ul>
+          <li>Генерация контента, аналитика, работа с большими объёмами текста</li>
+          <li>Глубокие исследования и анализ данных</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag green">Бесплатно</span>
+        <span class="tag green">Доступен в РФ</span>
+        <span class="tag blue">Аналитика</span>
+      </div>
+    </div>
+
+    <!-- 3. Claude -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">3</div>
+        <div class="tool-title">
+          <h3>Claude (Anthropic)</h3>
+          <div class="subtitle">Специалист по длинным аналитическим текстам</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Через VPN</span>
+        <span class="chip"><span class="label">Цена</span> Claude Pro — $20/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>Модель от Anthropic, которая специализируется на сложных аналитических задачах и длинных текстах. Держит логику на протяжении всей статьи, не теряет нить. Выдаёт тексты с минимальным «AI-привкусом». Идеален для SEO-материалов, аналитических текстов, стратегических документов. Может обрабатывать тысячи отзывов и комментариев, выявляя боли клиентов.</p>
+        <ul>
+          <li>Длинный контент (статьи на 3000+ слов), стратегические документы</li>
+          <li>Email-цепочки, аналитика отзывов</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">SEO-тексты</span>
+        <span class="tag blue">Аналитика</span>
+        <span class="tag orange">Требует VPN</span>
+      </div>
+    </div>
+
+    <!-- 4. Copy.ai -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">4</div>
+        <div class="tool-title">
+          <h3>Copy.ai</h3>
+          <div class="subtitle">AI-платформа для go-to-market операций</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Ограничен</span>
+        <span class="chip"><span class="label">Цена</span> Бесплатно / от $49/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>AI-платформа для go-to-market операций, которая помогает с любыми копирайтерскими задачами — от слоганов для рекламы до постов для соцсетей и промо-писем. Content Agent Studio — AI-агенты, которые учатся вашему бренд-голосу на трёх примерах. 90+ шаблонов для разных форматов контента. Генерация SEO-оптимизированных текстов. Встроенный чат и редактор для быстрого редактирования.</p>
+        <ul>
+          <li>Продуктовые описания, email-последовательности, лендинги</li>
+          <li>Посты в соцсети, рекламные заголовки</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Копирайтинг</span>
+        <span class="tag blue">Шаблоны</span>
+        <span class="tag orange">Ограничен в РФ</span>
+      </div>
+    </div>
+
+    <!-- 5. Writesonic -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">5</div>
+        <div class="tool-title">
+          <h3>Writesonic</h3>
+          <div class="subtitle">Инструмент для генерации маркетинговых текстов</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Ограничен</span>
+        <span class="chip"><span class="label">Цена</span> Бесплатно / от $19/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>Инструмент для генерации маркетинговых и рекламных текстов. Генерация статей, постов, писем, объявлений. Шаблоны для разных маркетинговых задач. SEO-оптимизация контента.</p>
+        <ul>
+          <li>Рекламные тексты, контент для блога</li>
+          <li>Email-рассылки, описания товаров</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Реклама</span>
+        <span class="tag orange">Ограничен в РФ</span>
+      </div>
+    </div>
+
+    <!-- 6. Jasper -->
+    <div class="tool-card text">
+      <div class="tool-head">
+        <div class="tool-num">6</div>
+        <div class="tool-title">
+          <h3>Jasper</h3>
+          <div class="subtitle">AI-помощник для маркетинговых текстов</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Ограничен</span>
+        <span class="chip"><span class="label">Цена</span> От $39/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>AI-помощник, созданный специально для маркетинговых и рекламных текстов. Специализация на копирайтинге и маркетинговых текстах. Поддержка бренд-голоса. Работа с длинными форматами.</p>
+        <ul>
+          <li>Рекламные кампании, контент-маркетинг</li>
+          <li>Email-маркетинг</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Копирайтинг</span>
+        <span class="tag blue">Бренд-голос</span>
+        <span class="tag orange">Ограничен в РФ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY 2: ИЗОБРАЖЕНИЯ -->
+  <section id="cat-image">
+    <div class="section-kicker">Категория 2</div>
+    <div class="cat-badge image">🎨 Изображения и дизайн</div>
+
+    <!-- 7. Midjourney -->
+    <div class="tool-card image">
+      <div class="tool-head">
+        <div class="tool-num">7</div>
+        <div class="tool-title">
+          <h3>Midjourney</h3>
+          <div class="subtitle">Лучшая нейросеть для генерации изображений</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Через VPN</span>
+        <span class="chip"><span class="label">Цена</span> От $10/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>Одна из лучших нейросетей для генерации изображений. Популяризация генеративных ИИ в 2025 году заменила банки стоковых фото на эксклюзивные креативы. Генерация четырёх вариантов изображений с одного промпта. Поддержка параллельной генерации. Высокое качество фотореалистичных изображений.</p>
+        <ul>
+          <li>Креативы для рекламы, обложки для соцсетей</li>
+          <li>Визуалы для блога, дизайн презентаций</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Фотореализм</span>
+        <span class="tag blue">Дизайн</span>
+        <span class="tag orange">Требует VPN</span>
+      </div>
+    </div>
+
+    <!-- 8. Adobe Firefly -->
+    <div class="tool-card image">
+      <div class="tool-head">
+        <div class="tool-num">8</div>
+        <div class="tool-title">
+          <h3>Adobe Firefly</h3>
+          <div class="subtitle">ИИ-инструменты для креативных задач от Adobe</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Ограничен</span>
+        <span class="chip"><span class="label">Цена</span> В подписке Creative Cloud</span>
+      </div>
+      <div class="tool-body">
+        <p>Набор ИИ-инструментов для креативных задач от Adobe. Генерация и редактирование изображений. Интеграция с Photoshop и другими продуктами Adobe. Работа с текстовыми эффектами и цветокоррекцией.</p>
+        <ul>
+          <li>Профессиональный дизайн, ретушь</li>
+          <li>Создание визуалов для рекламных кампаний</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Профессиональный дизайн</span>
+        <span class="tag blue">Интеграция с Photoshop</span>
+      </div>
+    </div>
+
+    <!-- 9. DALL-E -->
+    <div class="tool-card image">
+      <div class="tool-head">
+        <div class="tool-num">9</div>
+        <div class="tool-title">
+          <h3>DALL-E</h3>
+          <div class="subtitle">Нейросеть для генерации изображений от OpenAI</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Через VPN</span>
+        <span class="chip"><span class="label">Цена</span> Через ChatGPT Plus ($20/мес)</span>
+      </div>
+      <div class="tool-body">
+        <p>Нейросеть для генерации изображений от OpenAI. Генерация одного изображения с промпта. Креативные и нестандартные визуальные решения.</p>
+        <ul>
+          <li>Быстрая генерация визуалов для идей и прототипов</li>
+          <li>Контент для соцсетей</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag blue">Креатив</span>
+        <span class="tag orange">Требует VPN</span>
+      </div>
+    </div>
+
+    <!-- 10. Canva AI -->
+    <div class="tool-card image">
+      <div class="tool-head">
+        <div class="tool-num">10</div>
+        <div class="tool-title">
+          <h3>Canva AI</h3>
+          <div class="subtitle">Бесплатный генератор изображений и графики</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Доступен (с ограничениями)</span>
+        <span class="chip"><span class="label">Цена</span> Бесплатно / Canva Pro $12,99/мес</span>
+      </div>
+      <div class="tool-body">
+        <p>Бесплатный генератор изображений и графики для соцсетей, презентаций, постов — всё за минуты. Генерация изображений по текстовому описанию. Готовые шаблоны для всех маркетинговых форматов. Интуитивный интерфейс для дизайна без навыков.</p>
+        <ul>
+          <li>Посты для соцсетей, презентации, баннеры</li>
+          <li>Сторис, обложки</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag green">Бесплатная версия</span>
+        <span class="tag blue">Шаблоны</span>
+      </div>
+    </div>
+
+    <!-- 11. Kandinsky -->
+    <div class="tool-card image">
+      <div class="tool-head">
+        <div class="tool-num">11</div>
+        <div class="tool-title">
+          <h3>Kandinsky</h3>
+          <div class="subtitle">Российская нейросеть от Сбера</div>
+        </div>
+      </div>
+      <div class="tool-stats">
+        <span class="chip"><span class="label">Доступ в РФ</span> Доступна без ограничений</span>
+        <span class="chip"><span class="label">Цена</span> Бесплатно</span>
+      </div>
+      <div class="tool-body">
+        <p>Российская нейросеть для генерации визуалов от Сбера. Генерация изображений на русском языке. Локальная разработка, поддержка технологического суверенитета.</p>
+        <ul>
+          <li>Создание иллюстраций, визуалов для соцсетей</li>
+          <li>Рекламные креативы</li>
+        </ul>
+      </div>
+      <div class="tool-extra">
+        <span class="tag green">Бесплатно
